@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.navigationcomponent.inicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_primerFragment"
+            app:destination="@id/primerFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_segundoFrangment"
+            app:destination="@id/segundoFrangment" />
+    </fragment>
+    <fragment
+        android:id="@+id/primerFragment"
+        android:name="com.example.navigationcomponent.primerFragment"
+        android:label="fragment_primer"
+        tools:layout="@layout/fragment_primer" >
+        <action
+            android:id="@+id/action_primerFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFrangment"
+        android:name="com.example.navigationcomponent.segundoFrangment"
+        android:label="fragment_segundo_frangment"
+        tools:layout="@layout/fragment_segundo_frangment" >
+        <action
+            android:id="@+id/action_segundoFrangment_to_tercerFragment"
+            app:destination="@id/tercerFragment" />
+        <action
+            android:id="@+id/action_segundoFrangment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tercerFragment"
+        android:name="com.example.navigationcomponent.tercerFragment"
+        android:label="fragment_tercer"
+        tools:layout="@layout/fragment_tercer" >
+        <action
+            android:id="@+id/action_tercerFragment_to_segundoFrangment"
+            app:destination="@id/segundoFrangment" />
+        <action
+            android:id="@+id/action_tercerFragment_to_inicioFragment3"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+</navigation>
